@@ -1,7 +1,7 @@
 .card {
   background-color: #ffe647; /* Replace with your desired color */
   width: 100%;
-  height: 20vh;
+  height: 55vh;
   position: relative;
   z-index: 1;
 }

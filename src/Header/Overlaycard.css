@@ -1,0 +1,28 @@
+.overlay-card {
+    background-color: rgb(38, 35, 35);
+    color: white;
+    padding: 16px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 800px; /* Set the desired width for the overlay card */
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .overlay-card:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  
+  .overlay-card-content {
+    text-align: center;
+  }
+
+
+  
