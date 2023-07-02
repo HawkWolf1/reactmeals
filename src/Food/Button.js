@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Button.css';
+import FoodCard from './Foodcard';
 
-import './Button.css'
+function Button() {
+  const [showFoodCard, setShowFoodCard] = useState(false);
+  const foodItems = ['Pizza', 'Burger', 'Sushi', 'Pasta'];
 
-function Button({ onClick }) {
+  const handleClick = () => {
+    setShowFoodCard(!showFoodCard);
+  };
+
   return (
-    <button className="button" onClick={onClick}>
-      Show Food Items
-    </button>
+    <div>
+      <button className="button" onClick={handleClick}>
+        Show Food Items
+      </button>
+      {showFoodCard && <FoodCard foodItems={foodItems} />}
+    </div>
   );
 }
 

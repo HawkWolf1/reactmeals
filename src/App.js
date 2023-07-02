@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
-
-import Card from './Header/Card.js'
+import Card from './Header/Card.js';
 import Overlaycard from './Header/Overlaycard.js';
-
 import Button from './Food/Button.js';
-import FoodList from './Food/FoodList';
-
+import FoodCard from './Food/Foodcard';
 
 function App() {
-  const [showFoodList, setShowFoodList] = useState(false);
+  const [showFoodCard, setShowFoodCard] = useState(false);
 
   const handleButtonClick = () => {
-    setShowFoodList(!showFoodList);
+    setShowFoodCard(!showFoodCard);
   };
 
   return (
     <div>
-      <Card/>
+      <Card />
       <Overlaycard />
 
       <Button onClick={handleButtonClick} />
-      {showFoodList && <FoodList />}
-
+      {showFoodCard && <FoodCard />}
     </div>
-    
   );
 }
 
