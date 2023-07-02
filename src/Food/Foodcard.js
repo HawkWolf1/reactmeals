@@ -1,5 +1,6 @@
 import React from 'react';
 import './Foodcard.css';
+import FoodItem from './Fooditem';
 
 function FoodCard() {
   const foodItems = [
@@ -15,8 +16,9 @@ function FoodCard() {
       <ul className="food-card-items">
         {foodItems.map((item, index) => (
           <li key={index}>
-          {item.name} - <span className="price">{item.price}</span>
-        </li>
+            <FoodItem name={item.name} price={item.price} />
+            
+          </li>
         ))}
       </ul>
     </div>
@@ -24,4 +26,3 @@ function FoodCard() {
 }
 
 export default FoodCard;
-
