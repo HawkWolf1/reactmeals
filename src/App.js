@@ -1,26 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from './Header/Card.js';
 import Overlaycard from './Header/Overlaycard.js';
 import Button from './Food/Button.js';
 import FoodCard from './Food/Foodcard';
 import CartButton from './Food/Cartbutton.js';
+import { CartProvider } from './Food/Cartcontext';
 
 function App() {
-  const [showFoodCard, setShowFoodCard] = useState(false);
-
-  const handleButtonClick = () => {
-    setShowFoodCard(!showFoodCard);
-  };
-
   return (
-    <div>
-      <Card />
-      <Overlaycard />
-      <CartButton/>
+    <CartProvider>
+      <div>
+        <Card />
+        <Overlaycard />
+        <CartButton />
 
-      <Button onClick={handleButtonClick} />
-      {showFoodCard && <FoodCard />}
-    </div>
+        <Button />
+        <FoodCard />
+      </div>
+    </CartProvider>
   );
 }
 

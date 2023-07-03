@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Foodcard.css';
 import FoodItem from './Fooditem';
+import { CartContext } from './Cartcontext';
 
 function FoodCard() {
+  const { addToCart } = useContext(CartContext);
+
   const foodItems = [
-    { name: 'Pizza', price: 'Rs 10.99' },
-    { name: 'Burger', price: 'Rs 8.99' },
-    { name: 'Sushi', price: 'Rs 12.99' },
-    { name: 'Pasta', price: 'Rs 9.99' },
+    { name: 'Pizza', price: '10.99' },
+    { name: 'Burger', price: '8.99' },
+    { name: 'Sushi', price: '12.99' },
+    { name: 'Pasta', price: '9.99' },
   ];
 
   return (
@@ -16,8 +19,7 @@ function FoodCard() {
       <ul className="food-card-items">
         {foodItems.map((item, index) => (
           <li key={index}>
-            <FoodItem name={item.name} price={item.price} />
-            
+            <FoodItem name={item.name} price={item.price} onAddToCart={() => addToCart(item)} />
           </li>
         ))}
       </ul>

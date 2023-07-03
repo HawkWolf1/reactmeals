@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Cartbutton.css';
+import { CartContext } from './Cartcontext';
 
 function CartButton() {
+  const { cartItems } = useContext(CartContext);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleButtonClick = () => {
-    setIsFormOpen(prevState => !prevState);
+    setIsFormOpen((prevState) => !prevState);
   };
 
   const handleClose = () => {
@@ -16,10 +18,19 @@ function CartButton() {
     alert('Your order has been placed!');
   };
 
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    cartItems.forEach((item) => {
+      const itemPrice = parseFloat(item.price.substring(3));
+      totalPrice += itemPrice * item.count;
+    });
+    return totalPrice.toFixed(2);
+  };
+
   return (
     <div>
       <button className="cart-button" onClick={handleButtonClick}>
-        Cart
+        Cart ({cartItems.length})
       </button>
       {isFormOpen && (
         <div className="cart-overlay">
@@ -30,9 +41,14 @@ function CartButton() {
             <button className="place-order-button" onClick={handlePlaceOrder}>
               Place Order
             </button>
-            <form>
-              The content of your form
-            </form>
+            <ul>
+              {cartItems.map((item, index) => (
+                <li key={index}>
+                  {item.name} - {item.price} - Quantity: {item.count}
+                </li>
+              ))}
+            </ul>
+            <p>Total Price: Rs {calculateTotalPrice()}</p>
           </div>
         </div>
       )}
@@ -41,7 +57,3 @@ function CartButton() {
 }
 
 export default CartButton;
-
-
-
-
