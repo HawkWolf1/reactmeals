@@ -105,3 +105,29 @@ li {
 .food-ty {
   margin-right: 10px;
 }
+
+
+.delete-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 50%; /* Makes the button circular */
+  width: 20px; /* Adjust the width and height to make it smaller */
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+.increment {
+  margin-right: 10px;
+}
+

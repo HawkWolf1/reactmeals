@@ -15,8 +15,32 @@ function CartButton() {
   };
 
   const handlePlaceOrder = () => {
-    alert('Your order has been placed!');
-    setCartItems([]); // Reset cart items to an empty array
+    if (cartItems.length > 0) {
+      alert('Your order has been placed!');
+      setCartItems([]); // Reset cart items to an empty array
+    }
+  };
+
+  const handleIncrement = (index) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[index].quantity += 1;
+    setCartItems(updatedCartItems);
+  };
+
+  const handleDecrement = (index) => {
+    const updatedCartItems = [...cartItems];
+    if (updatedCartItems[index].quantity > 1) {
+      updatedCartItems[index].quantity -= 1;
+    } else {
+      updatedCartItems.splice(index, 1); // Remove the item from the cart
+    }
+    setCartItems(updatedCartItems);
+  };
+
+  const handleDelete = (index) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems.splice(index, 1); // Remove the item from the cart
+    setCartItems(updatedCartItems);
   };
 
   return (
@@ -36,10 +60,16 @@ function CartButton() {
             <ul>
               {cartItems.map((item, index) => (
                 <li key={index}>
-                <span className="food-me">{item.name}</span>
-                <span className="food-ce">Rs {item.price}</span>
-                <span className="food-ty">Quantity: {item.quantity}</span>
-              </li>
+                  <span className="food-me">{item.name}</span>
+                  <span className="food-ce">Rs {item.price}</span>
+                  <span className="food-ty">
+                    Quantity: 
+                    <button onClick={() => handleDecrement(index)}>-</button>
+                    {item.quantity}
+                    <button className="increment" onClick={() => handleIncrement(index)}>+</button>
+                    <button className="delete-button" onClick={() => handleDelete(index)}>R</button>
+                  </span>
+                </li>
               ))}
             </ul>
             <div className="total-price">Total Price: Rs {totalPrice}</div>
