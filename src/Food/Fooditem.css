@@ -1,36 +1,90 @@
+/* .food-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.food-name {
+  font-weight: bold;
+}
+
+
+.food-price {
+  margin-left: auto; 
+  text-align: right;
+}
+
+
+.add-button {
+  background-color: #ffe647;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto; 
+  margin-right: 20px;
+}
+
+
+
+.quantity-box {
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: 10px;
+  border: 1px solid rgb(255, 145, 0);
+} */
+
+
 .food-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    margin-left: 20px;
-  }
-  
-  .food-name {
-    font-weight: bold;
-    flex-grow: 1;
-    text-align: left;
-  }
-  
-  .food-price {
-    margin-right: 40px;
-    text-align: left;
-  }
-  
-  .add-button {
-    background-color: #ffe647;
-    color: rgb(5, 5, 5);
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    cursor: pointer;
-    margin-right: 20px; 
-  }
-  
-  .quantity-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #f9a600;
-    border-radius: 4px;
-    padding: 4px 8px;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.food-name {
+  font-weight: bold;
+}
+
+.food-price {
+  margin-left: auto; /* Moves the price to the right */
+  text-align: right;
+  margin-right: 40px;
+  font-weight: bold;
+}
+
+.add-button {
+  background-color: #ffe647;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.quantity-box {
+
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: 10px;
+  border: 1px solid rgb(255, 145, 0);
+} 
+

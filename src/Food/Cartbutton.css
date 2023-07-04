@@ -73,7 +73,7 @@ ul {
 }
 li {
   margin-bottom: 20px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 8px;
   display: flex;
@@ -92,16 +92,16 @@ li {
 }
 
 
-.food-name {
+.food-me {
   margin-right: 10px;
 }
 
-.food-price {
+.food-ce {
   font-weight: bold;
   margin-right: 50px;
   margin-left: auto;
 }
 
-.food-quantity {
+.food-ty {
   margin-right: 10px;
 }

@@ -7,10 +7,10 @@ function FoodCard() {
   const { addToCart } = useContext(CartContext);
 
   const foodItems = [
-    { name: 'Pizza', price: '75.50' },
-    { name: 'Burger', price: '45.50' },
-    { name: 'Sushi', price: '35.00' },
-    { name: 'Pasta', price: '30.50' },
+    { name: 'PIZZA', price: '75.50' },
+    { name: 'BURGER', price: '45.50' },
+    { name: 'SUSHI', price: '35.00' },
+    { name: 'PASTA', price: '30.50' },
   ];
 
   return (

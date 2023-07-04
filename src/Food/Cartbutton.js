@@ -36,9 +36,9 @@ function CartButton() {
             <ul>
               {cartItems.map((item, index) => (
                 <li key={index}>
-                <span className="food-name">{item.name}</span>
-                <span className="food-price">Rs {item.price}</span>
-                <span className="food-quantity">Quantity: {item.quantity}</span>
+                <span className="food-me">{item.name}</span>
+                <span className="food-ce">Rs {item.price}</span>
+                <span className="food-ty">Quantity: {item.quantity}</span>
               </li>
               ))}
             </ul>
