@@ -24,7 +24,7 @@ function FoodItem({ name, price }) {
   return (
     <div className="food-item">
       <span className="food-name">{name}</span>
-      <span className="food-price">{price}</span>
+      <span className="food-price">Rs  {price}</span>
       <button className="add-button" onClick={handleAddToCart}>
         Add
       </button>
@@ -32,6 +32,8 @@ function FoodItem({ name, price }) {
         Quantity: {cartItems.find(item => item.name === name)?.quantity || 0}
       </div>
     </div>
+
+    
   );
 }
 

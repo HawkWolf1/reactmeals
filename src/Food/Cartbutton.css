@@ -1,4 +1,3 @@
-
 .cart-card {
   position: fixed;
   top: 50%;
@@ -7,10 +6,9 @@
   background-color: #f987d1;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 8px; /* Adjust the value to control the roundness of the edges */
+  border-radius: 8px;
+  width: 600px;
 }
-
-
 
 .cart-overlay {
   position: fixed;
@@ -18,8 +16,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
-  z-index: 9999; /* Make sure it's above other elements */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,42 +28,80 @@
   cursor: pointer;
 }
 
-
-
 .close-button {
   background-color: #ffffff;
   color: #ff0000;
   border: 1px solid #ff0000;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 8px; /* Adjust the value to control the roundness of the edges */
+  border-radius: 8px;
   cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
   transition: background-color 0.3s ease;
 }
-
-
 
 .close-button:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
-
 .place-order-button {
   background-color: #ffae00;
-  color: #000000 ;
+  color: #000000;
   border: 1px solid #000000;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 8px; /* Adjust the value to control the roundness of the edges */
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-bottom: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 110px;
 }
-
-
 
 .place-order-button:hover {
   background-color: #ebebeb;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.total-price {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.cart-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+
+.food-name {
+  margin-right: 10px;
+}
+
+.food-price {
+  font-weight: bold;
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.food-quantity {
+  margin-right: 10px;
 }

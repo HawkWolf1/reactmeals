@@ -8,6 +8,7 @@
     margin: 0 auto;
     transform: translateY(80%);
     text-align: left;
+    margin-top: -80px;
   }
   
   .food-card-title {
@@ -29,13 +30,10 @@
     margin-bottom: 20px;
     position: relative;
     text-align: left;
+    margin-right: 30px;
   }
 
-  /* .food-card-items li span {
-    color: #0664fc; /* Set the desired color for the prices */
-    /* font-weight: bold; */
-  /* } */
-   /* */ 
+
   .food-card-items li::after {
     content: "";
     display: block;

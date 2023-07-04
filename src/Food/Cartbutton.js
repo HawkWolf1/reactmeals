@@ -3,7 +3,7 @@ import './Cartbutton.css';
 import { CartContext } from './Cartcontext';
 
 function CartButton() {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, setCartItems, totalPrice } = useContext(CartContext);
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -16,15 +16,7 @@ function CartButton() {
 
   const handlePlaceOrder = () => {
     alert('Your order has been placed!');
-  };
-
-  const calculateTotalPrice = () => {
-    let totalPrice = 0;
-    cartItems.forEach((item) => {
-      const itemPrice = parseFloat(item.price.substring(3));
-      totalPrice += itemPrice * item.count;
-    });
-    return totalPrice.toFixed(2);
+    setCartItems([]); // Reset cart items to an empty array
   };
 
   return (
@@ -44,11 +36,13 @@ function CartButton() {
             <ul>
               {cartItems.map((item, index) => (
                 <li key={index}>
-                  {item.name} - {item.price} - Quantity: {item.count}
-                </li>
+                <span className="food-name">{item.name}</span>
+                <span className="food-price">Rs {item.price}</span>
+                <span className="food-quantity">Quantity: {item.quantity}</span>
+              </li>
               ))}
             </ul>
-            <p>Total Price: Rs {calculateTotalPrice()}</p>
+            <div className="total-price">Total Price: Rs {totalPrice}</div>
           </div>
         </div>
       )}

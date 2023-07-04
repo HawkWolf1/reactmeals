@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
     let items = 0;
 
     for (const item of cartItems) {
-      total += parseFloat(item.price);
+      total += parseFloat(item.price)* item.quantity;;
       items += item.quantity;
     }
 
